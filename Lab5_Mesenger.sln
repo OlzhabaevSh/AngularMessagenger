@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab5_Mesenger", "Lab5_Mesenger\Lab5_Mesenger.csproj", "{4DC78F6E-4E9A-45A8-8678-6A830F38CC0B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Note", "Note\Note.csproj", "{7247649E-8A1C-4D06-A6FC-BFD5A5B56A6D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4DC78F6E-4E9A-45A8-8678-6A830F38CC0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4DC78F6E-4E9A-45A8-8678-6A830F38CC0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4DC78F6E-4E9A-45A8-8678-6A830F38CC0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4DC78F6E-4E9A-45A8-8678-6A830F38CC0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7247649E-8A1C-4D06-A6FC-BFD5A5B56A6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7247649E-8A1C-4D06-A6FC-BFD5A5B56A6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7247649E-8A1C-4D06-A6FC-BFD5A5B56A6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7247649E-8A1C-4D06-A6FC-BFD5A5B56A6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,100 @@
+﻿.note-app {
+  background-color: black;
+  margin: 15px;
+  padding: 15px;
+  width: 450px;
+  border: darkblue;
+  color: lightgray;
+  height: 600px;
+}
+.note-nav {
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+textarea {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: lightgray;
+}
+.note-btn {
+  background-color: transparent;
+  border: none;
+  color: gray;
+  cursor: pointer;
+  outline: none;
+  transition: 100ms ease all;
+  font-family: 'Segoe WP SemiLight';
+  font-size: 16px;
+}
+.note-btn.active {
+  color: blue;
+}
+.action-list {
+  display: inline-block;
+  height: 400px;
+  width: 150px;
+  padding-right: 10px;
+  overflow: hidden;
+}
+.action-detail {
+  display: inline-block;
+  height: 400px;
+  overflow: hidden;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.action-title {
+  font-size: 16px;
+  color: lightgray;
+}
+.action-date {
+  font-size: 10px;
+  margin-top: -15px;
+}
+.action-item {
+  background-color: transparent;
+  border: none;
+  color: gray;
+  cursor: pointer;
+  display: block;
+  outline: none;
+  transition: 100ms ease all;
+  font-size: 14px;
+  min-width: 100px;
+  min-height: 25px;
+  margin-bottom: 5px;
+}
+.action-item.finish {
+  border-right: 5px solid green;
+}
+.action-item:hover {
+  color: lightblue;
+}
+.action-item.active {
+  color: white;
+}
+.finish-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 100ms ease all;
+  min-width: 150px;
+  min-height: 45px;
+  padding: 5px;
+  color: white;
+}
+.finish-btn.finish {
+  border: 1px solid green;
+  color: green;
+}
+.finish-btn.re-start {
+  border: 1px solid blue;
+  color: blue;
+}

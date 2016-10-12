@@ -1,0 +1,16 @@
+﻿<div>
+    <div class="note-nav">
+        Notes: 
+        <button class="note-btn"
+                ng-repeat="note in $ctrl.notes"
+                ng-class="{active: note.isActive}"
+                ng-click="$ctrl.select(note)">
+            {{note.title}}
+        </button>
+        <button class="note-btn active" ng-click="$ctrl.create()">+</button>
+    </div>
+
+    <div ng-show="$ctrl.note != null">
+        <nt-actions-list actions="$ctrl.note.actions"></nt-actions-list>
+    </div>
+</div>

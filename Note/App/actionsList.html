@@ -1,0 +1,18 @@
+﻿<div>
+    <div class="action-list">
+        <button class="action-item"
+                ng-repeat="act in $ctrl.actions"
+                ng-class="{active: act.id == $ctrl.currentAction.id, finish: act.isFinished}"
+                ng-click="$ctrl.select(act)">
+            <b>{{act.title}}</b>
+            <br />
+            {{act.createdDate.toLocaleDateString()}}
+        </button>
+        <button class="action-item" ng-click="$ctrl.create()">+</button>
+    </div>
+
+    <div class="action-detail" ng-show="$ctrl.currentAction != null">
+        <nt-action-detail action="$ctrl.currentAction"></nt-action-detail>
+    </div>
+
+</div>

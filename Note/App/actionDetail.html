@@ -1,0 +1,14 @@
+﻿<div>
+    <p><input type="text" class="action-title" ng-model="$ctrl.action.title" /></p>
+    <p class="action-date">{{$ctrl.action.createdDate.toLocaleDateString()}}</p>
+    <hr />
+    <textarea ng-model="$ctrl.action.description"></textarea>
+    <hr />
+    <p>
+        Category:
+        <select ng-options="cat.fullName for cat in $ctrl.categories track by cat.id"
+                ng-model="$ctrl.action.category"></select>
+    </p>
+    <button class="finish-btn finish" ng-click="$ctrl.changeStatus()" ng-hide="$ctrl.action.isFinished">Finish</button>
+    <button class="finish-btn re-start" ng-click="$ctrl.changeStatus()" ng-show="$ctrl.action.isFinished">ReStart</button>
+</div>
