@@ -47,7 +47,7 @@
         notes: Array<INoteVM>;
         
         note: INote;
-
+        
         create(): void;
         select(note: INoteVM): void;
     }
@@ -55,7 +55,9 @@
     export interface IActionsListController {
         actions: Array<IAction>;
         currentAction: IAction;
-        
+
+        isClose: boolean;
+
         create(): void;
         select(action: IAction);
     }
@@ -64,7 +66,9 @@
         action: IAction;
 
         categories: Array<ICategory>;
-        
+
+        isClose: boolean;
+
         changeStatus(): void;
         
     }

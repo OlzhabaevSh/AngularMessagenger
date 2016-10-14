@@ -1,9 +1,13 @@
 var actionsListController = (function () {
     function actionsListController($scope) {
         this.$scope = $scope;
+        this.isClose = true;
     }
-    actionsListController.prototype.$onChanges = function (actions) {
-        console.log('$onChanges', actions);
+    actionsListController.prototype.$onInit = function () {
+        var _this = this;
+        this.$scope.$on('detail-close', function () {
+            _this.currentAction = null;
+        });
     };
     actionsListController.prototype.create = function () {
         var id = this.actions.length;

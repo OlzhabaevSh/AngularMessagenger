@@ -17,7 +17,7 @@
 
         this.$scope.$on('detail-open', () => {
             this.isClose = false;
-        };
+        });
 
         this.categories = this.noteRepo.getCategories();
     }

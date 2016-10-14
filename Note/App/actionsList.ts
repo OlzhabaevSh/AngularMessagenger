@@ -3,12 +3,16 @@
     actions: Array<nt.IAction>;
     currentAction: nt.IAction;
 
+    isClose: boolean;
+
     constructor(private $scope: ng.IScope) {
-        
+        this.isClose = true;
     }
 
-    $onChanges(actions) {
-        console.log('$onChanges', actions);
+    $onInit() {
+        this.$scope.$on('detail-close', () => {
+            this.currentAction = null;
+        });
     }
 
     create(): void {
