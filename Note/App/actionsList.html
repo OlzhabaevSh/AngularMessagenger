@@ -1,18 +1,22 @@
-﻿<div>
-    <div class="action-list">
-        <button class="action-item"
-                ng-repeat="act in $ctrl.actions"
-                ng-class="{active: act.id == $ctrl.currentAction.id, finish: act.isFinished}"
-                ng-click="$ctrl.select(act)">
-            <b>{{act.title}}</b>
-            <br />
-            {{act.createdDate.toLocaleDateString()}}
-        </button>
-        <button class="action-item" ng-click="$ctrl.create()">+</button>
+﻿<div class="ms-Grid container-closed" ng-class="{'ms-u-slideRightIn10': $ctrl.actions != null}">
+    <div class="ms-Grid-row">
+        <div class="ms-Grid-col ms-u-sm4 ms-u-md4 ms-u-lg4 ms-fontSize-l">
+            <div class="ms-borderColor-themePrimary ms-fontColor-neutralLighterAlt--hover is-selectable"
+                 ng-repeat="act in $ctrl.actions"
+                 ng-class="{'ms-fontColor-themeDark': act.id == $ctrl.currentAction.id, 'ms-fontColor-neutralTertiaryAlt': act.id != $ctrl.currentAction.id, 'note-action-item-selected': act.isFinished}"
+                 ng-click="$ctrl.select(act)">
+                <b>Title: </b> {{act.title}} 
+                <br />
+                <b>Date: </b> {{act.createdDate.toLocaleDateString()}}
+            </div>
+            <div class="border-all-min ms-fontColor-themeDarker--hover is-selectable ms-borderColor-neutralLight ms-borderColor-themeDark--hover btn-add-action"
+                 ng-click="$ctrl.create()">
+                <i class="ms-Icon ms-Icon--plus" aria-hidden="true"></i> Add Action
+            </div>
+        </div>
+        <div class="ms-Grid-col ms-u-sm8 ms-u-md8 ms-u-lg8">
+            <nt-action-detail action="$ctrl.currentAction"></nt-action-detail>
+        </div>
     </div>
-
-    <div class="action-detail" ng-show="$ctrl.currentAction != null">
-        <nt-action-detail action="$ctrl.currentAction"></nt-action-detail>
-    </div>
-
 </div>
+

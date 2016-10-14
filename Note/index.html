@@ -1,17 +1,23 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en" ng-app="app">
+<html lang="en" ng-app="my-app">
 <head>
     <meta charset="utf-8" />
     <title>TypeScript HTML App</title>
     <link href="app.css" rel="stylesheet" />
+    <link href="Content/fabric.css" rel="stylesheet" />
+    <link href="Content/fabric.components.css" rel="stylesheet" />
 </head>
-<body>
-    
-    <div class="note-app">
-        <h2>Note app example</h2>
+<body class="ms-bgColor-black ms-fontColor-neutralLight">
 
-        <nt-note></nt-note>
+    <div class="ms-Grid">
+        <div class="ms-Grid-row">
+            <div class="ms-Grid-col ms-u-sm4 ms-u-md4 ms-u-lg4">
+                <div class="border-all-min ms-borderColor-neutralLight form-main-container" style="height:500px">
+                    <nt-note></nt-note>
+                </div>
+            </div>
+        </div>
 
     </div>
 

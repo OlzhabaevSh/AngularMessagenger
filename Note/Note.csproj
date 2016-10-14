@@ -22,6 +22,15 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\fabric.components.css" />
+    <Content Include="Content\fabric.components.min.css" />
+    <Content Include="Content\fabric.components.rtl.css" />
+    <Content Include="Content\fabric.components.rtl.min.css" />
+    <Content Include="Content\fabric.css" />
+    <Content Include="Content\fabric.min.css" />
+    <Content Include="Content\fabric.rtl.css" />
+    <Content Include="Content\fabric.rtl.min.css" />
+    <Content Include="Scripts\angular-winjs.js" />
     <Content Include="app.css">
       <DependentUpon>app.less</DependentUpon>
     </Content>
@@ -35,6 +44,8 @@
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\jquery.fabric.js" />
+    <Content Include="Scripts\jquery.fabric.min.js" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -62,12 +73,61 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
+    <Content Include="Content\sass\_Office.Color.Variables.scss" />
+    <Content Include="Content\sass\_Fabric.ZIndex.Variables.scss" />
+    <Content Include="Content\sass\_Fabric.Utilities.scss" />
+    <Content Include="Content\sass\_Fabric.Typography.Variables.scss" />
+    <Content Include="Content\sass\_Fabric.Typography.scss" />
+    <Content Include="Content\sass\_Fabric.Typography.Language.Overrides.scss" />
+    <Content Include="Content\sass\_Fabric.Typography.Fonts.scss" />
+    <Content Include="Content\sass\_Fabric.Responsive.Variables.scss" />
+    <Content Include="Content\sass\_Fabric.Responsive.Utilities.Variables.scss" />
+    <Content Include="Content\sass\_Fabric.Mixins.scss" />
+    <Content Include="Content\sass\_Fabric.Mixins.RTL.scss" />
+    <Content Include="Content\sass\_Fabric.Icons.scss" />
+    <Content Include="Content\sass\_Fabric.Grid.scss" />
+    <Content Include="Content\sass\_Fabric.Common.scss" />
+    <Content Include="Content\sass\_Fabric.Color.Variables.scss" />
+    <Content Include="Content\sass\_Fabric.Color.Mixins.scss" />
+    <Content Include="Content\sass\_Fabric.Animations.scss" />
+    <Content Include="Content\sass\_Fabric.Animations.RTL.scss" />
+    <Content Include="Content\sass\Fabric.Utilities.Output.scss" />
+    <Content Include="Content\sass\Fabric.Typography.Output.scss" />
+    <Content Include="Content\sass\Fabric.Typography.Language.Overrides.Output.scss" />
+    <Content Include="Content\sass\Fabric.Typography.Fonts.Output.scss" />
+    <Content Include="Content\sass\Fabric.scss" />
+    <Content Include="Content\sass\Fabric.RTL.scss" />
+    <Content Include="Content\sass\Fabric.Responsive.Utilities.Output.scss" />
+    <Content Include="Content\sass\Fabric.Icons.RTL.Output.scss" />
+    <Content Include="Content\sass\Fabric.Icons.Output.scss" />
+    <Content Include="Content\sass\Fabric.Icons.Font.Output.scss" />
+    <Content Include="Content\sass\Fabric.Grid.Output.scss" />
+    <Content Include="Content\sass\Fabric.Components.scss" />
+    <Content Include="Content\sass\Fabric.Color.Mixins.Output.scss" />
+    <Content Include="Content\sass\Fabric.Animations.RTL.Output.scss" />
+    <Content Include="Content\sass\Fabric.Animations.Output.scss" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
     <None Include="web.Release.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
+    <Content Include="WinJS\css\ui-dark.css" />
+    <Content Include="WinJS\css\ui-dark.min.css" />
+    <Content Include="WinJS\css\ui-light.css" />
+    <Content Include="WinJS\css\ui-light.min.css" />
+    <Content Include="WinJS\js\base.js" />
+    <Content Include="WinJS\js\base.min.js" />
+    <Content Include="WinJS\js\en-US\ui.strings.js" />
+    <Content Include="WinJS\js\ui.js" />
+    <Content Include="WinJS\js\ui.min.js" />
+    <Content Include="WinJS\js\ui.min.js.map" />
+    <Content Include="WinJS\js\base.min.js.map" />
+    <Content Include="WinJS\fonts\Symbols.ttf" />
+    <None Include="WinJS\js\WinJS.intellisense.js" />
+    <Content Include="WinJS\js\WinJS.intellisense-setup.js" />
+    <Content Include="WinJS\License.txt" />
+    <Content Include="WinJS\README.md" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>

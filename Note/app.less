@@ -1,123 +1,65 @@
-﻿.note-app {
-    background-color: black;
-    margin:15px;
-    padding: 15px;
-    width: 450px;
-    border: darkblue;
-    color: lightgray;
-    height:600px;
+﻿body{
+    height: 100%;
+    width: 100%;
 }
 
-.note-nav{
-    margin-bottom: 10px;
-    padding-top: 10px;
+.container-closed{
+    opacity: 0;
 }
 
 input{
     background-color:transparent;
-    border:none;
-    outline: none;
+    border-top: none;
+    border-left:none;
+    border-right:none;
+    outline:none;
+
+    &.custom-border-bottom {
+        border-bottom: 1px solid;
+    }
+
 }
 
 textarea{
     background-color:transparent;
     border:none;
-    outline: none;
-    color:lightgray;
-}
-
-.note-btn {
-    background-color: transparent;
-    border: none;
-    color: gray;
-    cursor: pointer;
-    outline: none;
-    transition: 100ms ease all;
-    font-family:'Segoe WP SemiLight';
-    font-size: 16px;
-
-    &.active {
-        color: blue;
-    }
-}
-
-.action-list{
-    display: inline-block;
-    height:400px;
-    width:150px;
-    padding-right: 10px;
-    overflow:hidden;
-}
-
-.action-detail{
-    display: inline-block;
-    height:400px;
-    overflow:hidden;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.action-title{
-    font-size:16px;
-    color:lightgray;
-}
-
-.action-date{
-    font-size:10px;
-    margin-top:-15px;
-}
-
-.action-item {
-    background-color: transparent;
-    border: none;
-    color:gray;
-    cursor:pointer;
-    display: block;
-    outline: none;
-    transition: 100ms ease all;
-    font-size:14px;
-
-    min-width:100px;
-    min-height:25px;
-
-    margin-bottom: 5px;
-
-    &.finish{
-        border-right: 5px solid green;
-    }
-
-    &:hover{
-        color:lightblue;
-    }
-
-    &.active{
-        color:white;
-    }
-
-}
-
-.finish-btn{
-    background-color:transparent;
-    border:none;
     outline:none;
-    cursor:pointer;
-    transition: 100ms ease all;
+}
 
-    min-width: 150px;
-    min-height: 45px;
 
-    padding:5px;
 
-    color:white;
+.border-all-min{
+    border: 1px solid;
+}
 
-    &.finish{
-        border: 1px solid green;
-        color:green;
-    }
+.border-selected-bottom {
+    border-bottom: 5px solid;
+}
 
-    &.re-start{
-        border: 1px solid blue;
-        color:blue;
-    }
+.btn-add-note{
+    cursor: pointer;
+    text-align: center;
+    margin-left: 5px;
+}
 
+.btn-add-action{
+    margin-top: 5px;
+}
+
+.form-main-container{
+    padding: 25px;
+
+}
+
+.note-action-item-selected {
+    border-left: 5px solid;
+}
+
+.item-hide{
+    opacity: 0;
+}
+
+.is-selectable{
+    cursor: pointer;
+    text-align:center;
 }

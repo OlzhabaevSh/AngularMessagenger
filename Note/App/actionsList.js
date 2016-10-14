@@ -1,18 +1,12 @@
-﻿class actionsListController implements nt.IActionsListController, ng.IComponentController {
-    
-    actions: Array<nt.IAction>;
-    currentAction: nt.IAction;
-
-    constructor(private $scope: ng.IScope) {
-        
+var actionsListController = (function () {
+    function actionsListController($scope) {
+        this.$scope = $scope;
     }
-
-    $onChanges(actions) {
+    actionsListController.prototype.$onChanges = function (actions) {
         console.log('$onChanges', actions);
-    }
-
-    create(): void {
-        let id = this.actions.length;
+    };
+    actionsListController.prototype.create = function () {
+        var id = this.actions.length;
         this.actions.push({
             id: id,
             title: "new action",
@@ -20,28 +14,23 @@
             description: 'Описание',
             isFinished: false
         });
-
-        let act = this.actions[this.actions.length - 1];
-
+        var act = this.actions[this.actions.length - 1];
         this.select(act);
-    }
-
-    select(action: nt.IAction) {
+    };
+    actionsListController.prototype.select = function (action) {
         this.currentAction = action;
         this.$scope.$broadcast('detail-open');
-    }
-}
-
+    };
+    return actionsListController;
+}());
 actionsListController.$inject = ['$scope'];
-
 mdl.controller('actionsListController', actionsListController);
-
-let actionListComponent: ng.IComponentOptions = {
+var actionListComponent = {
     controller: 'actionsListController',
     templateUrl: '/app/actionsList.html',
     bindings: {
         actions: '='
     }
 };
-
 mdl.component('ntActionsList', actionListComponent);
+//# sourceMappingURL=actionsList.js.map

@@ -4,11 +4,21 @@
 
     categories: Array<nt.ICategory>;
 
-    constructor(private noteRepo: nt.INoteRepository) {
+    isClose: boolean;
 
+    constructor(private noteRepo: nt.INoteRepository, private $scope: ng.IScope) {
+        this.isClose = true;
     }
 
     $onInit() {
+        this.$scope.$on('detail-close', () => {
+            this.isClose = true;
+        });
+
+        this.$scope.$on('detail-open', () => {
+            this.isClose = false;
+        };
+
         this.categories = this.noteRepo.getCategories();
     }
 
@@ -17,7 +27,7 @@
     }
     
 }
-actionDetailController.$inject = ['noteRepositoryService'];
+actionDetailController.$inject = ['noteRepositoryService', '$scope'];
 
 mdl.controller('actionDetailController', actionDetailController);
 

@@ -1,0 +1,1 @@
+﻿let mdl = angular.module('my-app', []);

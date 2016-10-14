@@ -1,16 +1,26 @@
-﻿<div>
-    <div class="note-nav">
-        Notes: 
-        <button class="note-btn"
-                ng-repeat="note in $ctrl.notes"
-                ng-class="{active: note.isActive}"
-                ng-click="$ctrl.select(note)">
-            {{note.title}}
-        </button>
-        <button class="note-btn active" ng-click="$ctrl.create()">+</button>
-    </div>
+﻿<div class="ms-Grid">
 
-    <div ng-show="$ctrl.note != null">
-        <nt-actions-list actions="$ctrl.note.actions"></nt-actions-list>
+    <div class="ms-Grid-row ms-fontSize-l">
+
+        <div class="ms-Grid-col ms-u-sm1 ms-u-md1 ms-u-lg1">
+            Notes: 
+        </div>
+
+        <div class="ms-Grid-col ms-u-sm2 ms-u-md2 ms-u-lg2 ms-borderColor-themeDark ms-fontColor-neutralTertiaryAlt ms-fontColor-neutralLighterAlt--hover is-selectable"
+             ng-repeat="note in $ctrl.notes"
+             ng-class="{'border-selected-bottom': note.isActive}"
+             ng-click="$ctrl.select(note)">
+            {{note.title}}
+        </div>
+
+        <div class="ms-Grid-col ms-u-sm1 ms-u-md1 ms-u-lg1 border-all-min ms-fontColor-themeDarker--hover is-selectable ms-borderColor-neutralLight ms-borderColor-themeDark--hover btn-add-note"
+             ng-click="$ctrl.create()">
+            <i class="ms-Icon ms-Icon--plus" aria-hidden="true"></i>
+        </div>
+
     </div>
+    <p></p>
+
+    <nt-actions-list actions="$ctrl.actions"></nt-actions-list>
+
 </div>

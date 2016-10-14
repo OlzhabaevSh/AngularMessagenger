@@ -1,14 +1,25 @@
-﻿<div>
-    <p><input type="text" class="action-title" ng-model="$ctrl.action.title" /></p>
-    <p class="action-date">{{$ctrl.action.createdDate.toLocaleDateString()}}</p>
+﻿<div class="container-closed" ng-class="{'ms-u-slideRightIn10': !$ctrl.isClose}">
+    <p>
+        <input type="text" class="ms-fontSize-xl ms-borderColor-themeDarker ms-fontColor-neutralLighter" ng-model="$ctrl.action.title" />
+    </p>
+    <p>
+        <b>Date: </b>
+        {{$ctrl.action.createdDate.toLocaleDateString()}}
+    </p>
     <hr />
-    <textarea ng-model="$ctrl.action.description"></textarea>
+    <textarea class="ms-fontColor-neutralLighter ms-fontSize-l" ng-model="$ctrl.action.description"></textarea>
     <hr />
     <p>
-        Category:
+        <b>Category: </b>
         <select ng-options="cat.fullName for cat in $ctrl.categories track by cat.id"
                 ng-model="$ctrl.action.category"></select>
     </p>
-    <button class="finish-btn finish" ng-click="$ctrl.changeStatus()" ng-hide="$ctrl.action.isFinished">Finish</button>
-    <button class="finish-btn re-start" ng-click="$ctrl.changeStatus()" ng-show="$ctrl.action.isFinished">ReStart</button>
+
+    <div class="border-all-min ms-fontColor-themeDarker--hover is-selectable ms-borderColor-green ms-fontColor-green ms-borderColor-themeDark--hover btn-add-action" ng-click="$ctrl.changeStatus()" ng-hide="$ctrl.action.isFinished">
+        <i class="ms-Icon ms-Icon--check" aria-hidden="true"></i> Finish
+    </div>
+    <div class="border-all-min ms-fontColor-themeDarker--hover is-selectable ms-borderColor-red ms-fontColor-red ms-borderColor-themeDark--hover btn-add-action" ng-click="$ctrl.changeStatus()" ng-show="$ctrl.action.isFinished">
+        <i class="ms-Icon ms-Icon--reply" aria-hidden="true"></i> ReStart
+    </div>
+
 </div>
